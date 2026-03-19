@@ -169,6 +169,15 @@
     }
     .sec-title em { font-style:italic; }
 
+    #nosotros .sec-title {
+      font-family:'Cormorant Garamond',serif;
+      font-weight:300; font-size:clamp(4rem,7vw,7.5rem);
+      line-height:.92; letter-spacing:.02em; color:var(--black); opacity:1;
+    }
+    #nosotros .sec-title em {
+      font-style:italic; font-weight:300;
+    }
+
     /* ── NOSOTROS ── */
     #nosotros { background:var(--white); padding:9rem 3.5rem; }
     .nos-header {
