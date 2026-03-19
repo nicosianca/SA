@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sianca Arquitectura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="nav-overlay" id="navOverlay">
+  <a href="#nosotros" onclick="closeNav()">El Estudio</a>
+  <a href="#proyectos" onclick="closeNav()">Proyectos</a>
+  <a href="#contacto" onclick="closeNav()">Contacto</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Sianca <em>Arquitectura</em></a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Sobre Nosotros</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-line"></div>
+    <p class="hero-eyebrow">Portfolio — Arquitectura &amp; Diseño</p>
+    <h1 class="hero-title">
+      Nicolás<br>
+      <span class="line-italic">Sianca</span>
+    </h1>
+    <p class="hero-desc">
+      Arquitecto, del concepto al habitar.
+    </p>
+    <p class="hero-desc">
+      Diseño integral, coordinación técnica y gestión de obra.
+    </p>
+    <div class="hero-cta">
+      <div class="hero-cta-line"></div>
+      <span class="hero-cta-text">Explorar trabajo</span>
+    </div>
+
+  </div>
+  <div class="hero-right">
+    <!-- Imagen del hero — reemplazar con foto del estudio o proyecto -->
+    <img src="images/img_001.jpg" alt="Arelauquen Modern Lodge — Bariloche" style="width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.85;"/>
+
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="nos-header">
+    <div>
+      <p class="sec-eyebrow">Sobre Nosotros</p>
+      <h2 class="sec-title">El<br><em>Estudio</em></h2>
+    </div>
+    <div class="nos-body">
+      <p>Sianca Arquitectura es un estudio con base en Buenos Aires, especializado en proyectos de diversas tipologías y entornos. La práctica se apoya en un proceso de trabajo riguroso: del programa a la materialidad, de la escala urbana al detalle constructivo.</p>
+      <p>Operamos en distintas geografías —Buenos Aires, Salta, Patagonia— con equipos técnicos locales y una dirección de proyecto centralizada que garantiza coherencia entre la propuesta arquitectónica y el resultado construido.</p>
+    </div>
+  </div>
+
+  <div class="nos-cards">
+    <div class="nos-card">
+      <div class="nos-card-left">
+        <div class="nos-card-num">01</div>
+        <div class="nos-card-name">
+          Nicolás<br>
+          <em>Sianca</em>
+        </div>
+        <div class="nos-card-role">Arquitecto — Fundador · FADU-UBA</div>
+      </div>
+      <div class="nos-card-right">
+        <p class="nos-card-bio">Egresado de FADU-UBA. Especializado en diseño proyectual, coordinación técnica y gestión de obra en tipologías residenciales, de uso mixto y corporativas. Interviene en todas las etapas del proceso: desde el anteproyecto hasta la dirección de obra, asegurando coherencia entre la propuesta arquitectónica y el resultado construido. Su práctica pone especial énfasis en la resolución técnica y la calidad espacial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="proy-header">
+    <div>
+      <p class="sec-eyebrow">Portfolio</p>
+      <h2 class="sec-title">Proyectos<br><em>seleccionados</em></h2>
+    </div>
+    <div class="proy-filter">
+      <button class="fbtn active" onclick="filtrar(event,'todos')">Todos</button>
+    </div>
+  </div>
+
+  <div class="proy-lista" id="pGrid">
+
+    <!-- PROYECTO 01 — Arelauquen Modern Lodge -->
+    <div class="proy-entry" data-cat="residencial">
+      <div class="proy-left">
+        <div class="proy-num">01</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Residencial</span><span>Montaña</span></div>
+        <h3 class="proy-title">Arelauquen Modern Lodge</h3>
+        <p class="proy-desc">Lodges exclusivos emplazados en el barrio privado de Arelauquen, San Carlos de Bariloche, con vistas al Cerro Catedral y al bosque patagónico. La propuesta establece una relación continua entre interior y exterior, disolviendo los límites entre ambos para que los habitantes sean parte del entorno natural y sus bellos paisajes en las distintas estaciones del año. La arquitectura adopta materiales nobles del lugar —madera y piedra— en volumetrías que se integran al paisaje, mientras que galerías y grandes paños vidriados prolongan el habitar hacia afuera.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Residencial</span>
+          <span class="proy-tag">Montaña</span>
+          <span class="proy-tag">Bariloche</span>
+          <span class="proy-tag">Lodge</span>
+        </div>
+        <div class="proy-slider" id="slider-01">
+          <div class="proy-slider-track" id="track-01">
+            <img src="images/img_002.jpg" alt="Arelauquen Modern Lodge — vista 1" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],0)"/>
+            <img src="images/img_003.jpg" alt="Arelauquen Modern Lodge — vista 2" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],1)"/>
+            <img src="images/img_004.jpg" alt="Arelauquen Modern Lodge — vista 3" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],2)"/>
+            <img src="images/img_005.jpg" alt="Arelauquen Modern Lodge — vista 4" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],3)"/>
+            <img src="images/img_006.jpg" alt="Arelauquen Modern Lodge — vista 5" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],4)"/>
+            <img src="images/img_007.jpg" alt="Arelauquen Modern Lodge — vista 6" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg'],5)"/>
+            <img src="images/img_008.jpg" alt="Arelauquen Modern Lodge — vista 7" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg','images/img_052.jpg','images/img_053.jpg','images/img_054.jpg','images/img_055.jpg'],6)"/>
+            <img src="images/img_052.jpg" alt="Arelauquen Modern Lodge — galería con pérgola" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg','images/img_052.jpg','images/img_053.jpg','images/img_054.jpg','images/img_055.jpg'],7)"/>
+            <img src="images/img_053.jpg" alt="Arelauquen Modern Lodge — fachada nocturna" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg','images/img_052.jpg','images/img_053.jpg','images/img_054.jpg','images/img_055.jpg'],8)"/>
+            <img src="images/img_054.jpg" alt="Arelauquen Modern Lodge — interior cocina-comedor" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg','images/img_052.jpg','images/img_053.jpg','images/img_054.jpg','images/img_055.jpg'],9)"/>
+            <img src="images/img_055.jpg" alt="Arelauquen Modern Lodge — baño principal" onclick="openLB(['images/img_002.jpg','images/img_003.jpg','images/img_004.jpg','images/img_005.jpg','images/img_006.jpg','images/img_007.jpg','images/img_008.jpg','images/img_052.jpg','images/img_053.jpg','images/img_054.jpg','images/img_055.jpg'],10)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-01','prev')">←</button>
+            <span class="proy-slider-count" id="count-01">1 / 11</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-01','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 02 — Ortopedia Alemana -->
+    <div class="proy-entry" data-cat="comercial">
+      <div class="proy-left">
+        <div class="proy-num">02</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Uso Mixto</span><span>Edificio</span></div>
+        <h3 class="proy-title">Ortopedia Alemana</h3>
+        <p class="proy-desc">Desarrollo proyectual ejecutivo de nuevo edificio de uso mixto para Ortopedia Alemana. El proyecto interviene sobre una estructura preexistente de tres pisos en estado de abandono, reconvirtiéndola y adaptándola a los nuevos requerimientos programáticos, e integrándola con el edificio corporativo contiguo de la empresa. El programa resultante articula sectores hospitalarios especializados, locales comerciales y plantas de oficinas en una solución arquitectónica coherente que responde tanto a las normativas técnicas de cada uso como a la identidad institucional de la firma.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Uso Mixto</span>
+          <span class="proy-tag">Hospitalario</span>
+          <span class="proy-tag">Comercial</span>
+          <span class="proy-tag">Oficinas</span>
+        </div>
+        <div class="proy-slider" id="slider-02">
+          <div class="proy-slider-track" id="track-02">
+            <img src="images/img_014.jpg" alt="Ortopedia Alemana — fachada detalle" onclick="openLB(['images/img_014.jpg','images/img_015.jpg','images/img_016.jpg'],0)"/>
+            <img src="images/img_015.jpg" alt="Ortopedia Alemana — vista esquina" onclick="openLB(['images/img_014.jpg','images/img_015.jpg','images/img_016.jpg'],1)"/>
+            <img src="images/img_016.jpg" alt="Ortopedia Alemana — fachada frontal" onclick="openLB(['images/img_014.jpg','images/img_015.jpg','images/img_016.jpg'],2)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-02','prev')">←</button>
+            <span class="proy-slider-count" id="count-02">1 / 3</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-02','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 03 — Arquitectura Corporativa -->
+    <div class="proy-entry" data-cat="comercial">
+      <div class="proy-left">
+        <div class="proy-num">03</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Corporativo</span><span>Industrial</span></div>
+        <h3 class="proy-title">Arquitectura Corporativa</h3>
+        <p class="proy-desc">Remodelación y actualización funcional de espacios corporativos e industriales para empresas de escala internacional. El trabajo comprendió el rediseño de oficinas en plantas productivas, interiorismo corporativo en áreas de representación y sectores operativos, integrando identidad de marca, confort y eficiencia en entornos de alta exigencia funcional.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Remodelación</span>
+          <span class="proy-tag">Interiorismo</span>
+          <span class="proy-tag">Corporativo</span>
+          <span class="proy-tag">Industrial</span>
+        </div>
+        <div class="proy-slider" id="slider-05">
+          <div class="proy-slider-track" id="track-05">
+            <img src="images/img_021.jpg" alt="Arquitectura Corporativa — área comedor-reuniones" onclick="openLB(['images/img_021.jpg','images/img_022.jpg','images/img_023.jpg','images/img_024.jpg'],0)"/>
+            <img src="images/img_022.jpg" alt="Arquitectura Corporativa — espacio de trabajo colaborativo" onclick="openLB(['images/img_021.jpg','images/img_022.jpg','images/img_023.jpg','images/img_024.jpg'],1)"/>
+            <img src="images/img_023.jpg" alt="Arquitectura Corporativa — sala de reuniones con luz natural" onclick="openLB(['images/img_021.jpg','images/img_022.jpg','images/img_023.jpg','images/img_024.jpg'],2)"/>
+            <img src="images/img_024.jpg" alt="Arquitectura Corporativa — sala de reuniones corporativa" onclick="openLB(['images/img_021.jpg','images/img_022.jpg','images/img_023.jpg','images/img_024.jpg'],3)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-05','prev')">←</button>
+            <span class="proy-slider-count" id="count-05">1 / 4</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-05','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 04 — Vivienda Multifamiliar -->
+    <div class="proy-entry" data-cat="residencial">
+      <div class="proy-left">
+        <div class="proy-num">04</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Residencial</span><span>Edificio</span></div>
+        <h3 class="proy-title">Vivienda Multifamiliar — San Isidro</h3>
+        <p class="proy-desc">Diseño proyectual de edificio residencial multifamiliar en San Isidro. Los módulos del edificio se implantan en un terreno pasante de calle a calle, generando una planta baja libre y pasante destinada a estacionamiento, con múltiples núcleos de circulación vertical que articulan las distintas tipologías de unidades. Las unidades se organizan en torno a un núcleo de circulación con pasarelas abiertas a un jardín interior, estrategia que incorpora luz natural y vegetación al corazón del edificio. La materialidad combina hormigón visto, madera y vidrio, buscando una escala sensible al tejido residencial del barrio.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Residencial</span>
+          <span class="proy-tag">San Isidro</span>
+          <span class="proy-tag">Diseño Proyectual</span>
+          <span class="proy-tag">Multifamiliar</span>
+        </div>
+        <div class="proy-slider" id="slider-03">
+          <div class="proy-slider-track" id="track-03">
+            <img src="images/img_029.jpg" alt="Vivienda Multifamiliar San Isidro — fachada terminada" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],0)"/>
+            <img src="images/img_030.jpg" alt="Vivienda Multifamiliar San Isidro — fachada lateral" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],1)"/>
+            <img src="images/img_031.jpg" alt="Vivienda Multifamiliar San Isidro — detalle balcones" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],2)"/>
+            <img src="images/img_032.jpg" alt="Vivienda Multifamiliar San Isidro — interior living-comedor A" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],3)"/>
+            <img src="images/img_033.jpg" alt="Vivienda Multifamiliar San Isidro — interior living-comedor B" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],4)"/>
+            <img src="images/img_034.jpg" alt="Vivienda Multifamiliar San Isidro — pasarela interior" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],5)"/>
+            <img src="images/img_035.jpg" alt="Vivienda Multifamiliar San Isidro — vista desde balcón" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],6)"/>
+            <img src="images/img_036.jpg" alt="Vivienda Multifamiliar San Isidro — render fachada" onclick="openLB(['images/img_029.jpg','images/img_030.jpg','images/img_031.jpg','images/img_032.jpg','images/img_033.jpg','images/img_034.jpg','images/img_035.jpg','images/img_036.jpg'],7)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-03','prev')">←</button>
+            <span class="proy-slider-count" id="count-03">1 / 8</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-03','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 05 — Vivienda Multifamiliar Villa Pueyrredón -->
+    <div class="proy-entry" data-cat="residencial">
+      <div class="proy-left">
+        <div class="proy-num">05</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Residencial</span><span>Edificio</span></div>
+        <h3 class="proy-title">Vivienda Multifamiliar — Villa Pueyrredón</h3>
+        <p class="proy-desc">Diseño proyectual de edificio residencial en Villa Pueyrredón, Buenos Aires. La planta baja está destinada a uso comercial, mientras que los pisos superiores albergan las unidades residenciales. La fachada de lenguaje contemporáneo articula hormigón visto, ladrillo visto y cristal en una composición que otorga identidad propia al edificio dentro del tejido barrial. Los balcones en voladizo modulan la escala urbana y generan transiciones graduales entre el espacio privado y la calle.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Residencial</span>
+          <span class="proy-tag">Villa Pueyrredón</span>
+          <span class="proy-tag">Diseño Proyectual</span>
+          <span class="proy-tag">Multifamiliar</span>
+        </div>
+        <div class="proy-slider" id="slider-04">
+          <div class="proy-slider-track" id="track-04">
+            <img src="images/img_037.jpg" alt="Vivienda Multifamiliar Villa Pueyrredón — render fachada ángulo" onclick="openLB(['images/img_037.jpg','images/img_038.jpg','images/img_039.jpg','images/img_040.jpg'],0)"/>
+            <img src="images/img_038.jpg" alt="Vivienda Multifamiliar Villa Pueyrredón — render fachada frontal" onclick="openLB(['images/img_037.jpg','images/img_038.jpg','images/img_039.jpg','images/img_040.jpg'],1)"/>
+            <img src="images/img_039.jpg" alt="Vivienda Multifamiliar Villa Pueyrredón — detalle acceso" onclick="openLB(['images/img_037.jpg','images/img_038.jpg','images/img_039.jpg','images/img_040.jpg'],2)"/>
+            <img src="images/img_040.jpg" alt="Vivienda Multifamiliar Villa Pueyrredón — detalle planta baja" onclick="openLB(['images/img_037.jpg','images/img_038.jpg','images/img_039.jpg','images/img_040.jpg'],3)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-04','prev')">←</button>
+            <span class="proy-slider-count" id="count-04">1 / 4</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-04','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 06 — Marayuí -->
+    <div class="proy-entry" data-cat="residencial">
+      <div class="proy-left">
+        <div class="proy-num">06</div>
+      </div>
+      <div class="proy-right">
+        <div class="proy-cats"><span>Residencial</span><span>Casa de Verano</span></div>
+        <h3 class="proy-title">Marayuí</h3>
+        <p class="proy-desc">Vivienda de verano emplazada en el barrio privado Marayuí, Chapadmalal, Buenos Aires. El proyecto integra conceptos de casa de playa y farmhouse en una propuesta que responde al clima costero y la exigencia del entorno marítimo. Los materiales fueron seleccionados por su resistencia a la humedad y la sal: piedra natural en basamentos y muros exteriores, y revestimiento de siding cementicio símil madera en fachadas, que combina la calidez visual de la madera con la durabilidad requerida por el clima. El resultado es una arquitectura relajada y arraigada al paisaje, que integra espacios interiores generosos con galerías y terrazas orientadas al exterior.</p>
+        <div class="proy-tags">
+          <span class="proy-tag">Residencial</span>
+          <span class="proy-tag">Chapadmalal</span>
+          <span class="proy-tag">Casa de Verano</span>
+          <span class="proy-tag">Farmhouse</span>
+        </div>
+        <div class="proy-slider" id="slider-06">
+          <div class="proy-slider-track" id="track-06">
+            <img src="images/img_046.jpg" alt="Marayuí — render galería-jardín" onclick="openLB(['images/img_046.jpg','images/img_047.jpg','images/img_056.jpg','images/img_057.jpg'],0)"/>
+            <img src="images/img_047.jpg" alt="Marayuí — render fachada atardecer" onclick="openLB(['images/img_046.jpg','images/img_047.jpg','images/img_056.jpg','images/img_057.jpg'],1)"/>
+            <img src="images/img_056.jpg" alt="Marayuí — planta baja" onclick="openLB(['images/img_046.jpg','images/img_047.jpg','images/img_056.jpg','images/img_057.jpg'],2)"/>
+            <img src="images/img_057.jpg" alt="Marayuí — render escalera interior" onclick="openLB(['images/img_046.jpg','images/img_047.jpg','images/img_056.jpg','images/img_057.jpg'],3)"/>
+          </div>
+          <div class="proy-slider-controls">
+            <button class="proy-slider-btn" onclick="sliderMove('track-06','prev')">←</button>
+            <span class="proy-slider-count" id="count-06">1 / 4</span>
+            <button class="proy-slider-btn" onclick="sliderMove('track-06','next')">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="cont-header">
+    <div>
+      <p class="sec-eyebrow">Contacto</p>
+
+    </div>
+  </div>
+
+  <div class="cont-cols">
+
+    <!-- NICOLÁS SIANCA -->
+    <div class="cont-col">
+      <p class="sec-eyebrow">Arquitecto</p>
+      <h3 class="cont-arq-title">Nicolás<br><em>Sianca</em></h3>
+      <div class="cont-rows">
+        <div class="cont-item" onclick="window.location='mailto:nico.sianca@gmail.com'">
+          <div class="cont-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </div>
+          <div class="cont-item-info">
+            <div class="cont-item-lbl">Email</div>
+            <span class="cont-item-val">nico.sianca@gmail.com</span>
+          </div>
+          <span class="cont-arrow">↗</span>
+        </div>
+        <div class="cont-item" onclick="window.open('https://linkedin.com/in/nicosianca')">
+          <div class="cont-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="cont-item-info">
+            <div class="cont-item-lbl">LinkedIn</div>
+            <span class="cont-item-val">nicosianca</span>
+          </div>
+          <span class="cont-arrow">↗</span>
+        </div>
+        <div class="cont-item" onclick="window.open('https://wa.me/5491166597023')">
+          <div class="cont-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="cont-item-info">
+            <div class="cont-item-lbl">WhatsApp</div>
+            <span class="cont-item-val">+54 9 11 6659-7023</span>
+          </div>
+          <span class="cont-arrow">↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RODRIGO CASAS DUBOIS -->
+
+  </div>
+</section>
+
+<footer>
+  <span class="foot-logo">Sianca <em>Arquitectura</em></span>
+  <span class="foot-copy">© 2025 — Buenos Aires, Argentina</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLB()">✕</button>
+  <button class="lb-prev" onclick="lbMove(-1)">←</button>
+  <img class="lb-img" id="lbImg" src="" alt=""/>
+  <button class="lb-next" onclick="lbMove(1)">→</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
